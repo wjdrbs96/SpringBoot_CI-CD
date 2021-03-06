@@ -31,6 +31,21 @@ deploy:
     local_dir: deploy
     wait-until-deployed: true
 
+  - provider: codedeploy
+    access_key_id: $AWS_ACCESS_KEY
+
+    secret_access_key: $AWS_SECRET_KEY
+
+    bucket: gyunny
+    key: SpringBoot_CI-CD.zip
+    bundle_type: zip
+    application: SpringBoot_Ci-CD
+
+    deployment_group: SpringBoot_CI_CD
+
+    region: ap-northeast-2
+    wait-until-deployed: true
+
 notification:
   email:
     recipients:
