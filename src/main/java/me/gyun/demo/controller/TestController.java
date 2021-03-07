@@ -3,7 +3,7 @@ package me.gyun.demo.controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 /**
- * created by jg 2021/03/07 ㅎ
+ * created by jg 2021/03/07
  */
 public class TestController {
 
