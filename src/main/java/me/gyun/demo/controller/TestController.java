@@ -16,6 +16,4 @@ public class TestController {
         return "Gyunny";
     }
 
-    // Travis CI
-
 }
