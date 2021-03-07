@@ -16,4 +16,9 @@ public class TestController {
         return "Gyunny";
     }
 
+
+    @GetMapping("/test")
+    public String travis() {
+        return "travis";
+    }
 }
