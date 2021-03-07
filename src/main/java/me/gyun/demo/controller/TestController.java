@@ -15,9 +15,4 @@ public class TestController {
     public String test2() {
         return "Gyunny";
     }
-
-    @GetMapping("jenkins")
-    public String jenkins() {
-        return "jenkins";
-    }
 }
