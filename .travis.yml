@@ -16,7 +16,7 @@ script: "./gradlew clean build"
 before_deploy:
   - zip -r SpringBoot_CI-CD *
   - mkdir -p deploy
-  - mv SpringBoot_CI-CD.zip deploy/SpringBoot_CI.CD.zip
+  - mv SpringBoot_CI-CD.zip deploy/SpringBoot_CI-CD.zip
 
 deploy:
   - provider: s3
