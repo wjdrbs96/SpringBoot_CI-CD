@@ -15,6 +15,4 @@ public class TestController {
     public String test2() {
         return "Gyunny";
     }
-
-
 }
