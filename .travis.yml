@@ -24,7 +24,7 @@ deploy:
 
     secret_access_key: $AWS_SECRET_KEY
 
-    bucket: gyunny
+    bucket: aws-gyun-s3
     region: ap-northeast-2
     skip_cleanup: true
     acl: private
@@ -39,9 +39,9 @@ deploy:
     bucket: gyunny
     key: SpringBoot_CI-CD.zip
     bundle_type: zip
-    application: SpringBoot_CI-CD
+    application: mywebapp
 
-    deployment_group: SpringBoot_CI_CD_Group
+    deployment_group: AWS_Gyun_Group
 
     region: ap-northeast-2
     wait-until-deployed: true
