@@ -11,7 +11,7 @@ public class TestController {
 
     @GetMapping("/")
     public String test() {
-        return "TEst";
+        return " 밥 밥 밥";
     }
 
     @GetMapping("/test")
