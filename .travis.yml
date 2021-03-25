@@ -39,7 +39,7 @@ deploy:
     bucket: aws-gyun-s3
     key: SpringBoot_CI-CD.zip
     bundle_type: zip
-    application: mywebapp
+    application: CodeDeploy
 
     deployment_group: CodeDeploy-Group
 
