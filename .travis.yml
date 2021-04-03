@@ -51,11 +51,6 @@ deploy:
     region: ap-northeast-2
     wait-until-deployed: true
 
-after_success:
-  - docker login -u $DOCKER_USER -p $DOCKER_PASS
-  - docker build -t wjdrbs96/test:1.0.1 ./
-  - docker push wjdrbs96/test:1.0.1
-
 notification:
   email:
     recipients:

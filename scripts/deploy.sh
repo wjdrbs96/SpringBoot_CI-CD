@@ -21,4 +21,7 @@ fi
 
 DEPLOY_JAR=$DEPLOY_PATH$JAR_NAME
 echo "> DEPLOY_JAR 배포"    >> /home/ec2-user/deploy.log
-nohup java -jar $DEPLOY_JAR >> /home/ec2-user/deploy.log 2>/home/ec2-user/deploy_err.log &
+
+docker login -u $DOCKER_USER -p $DOCKER_PASS
+docker build -t wjdrbs96/$DEPLOY_JAR:1.0.1 ./
+docker push wjdrbs96/$DEPLOY_JAR:1.0.1
