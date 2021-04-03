@@ -4,4 +4,4 @@ WORKDIR /root
 
 COPY ./*.jar .
 
-CMD java -jar * .
+CMD java -jar *.jar .
