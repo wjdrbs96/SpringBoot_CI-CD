@@ -6,6 +6,18 @@
 
 <br>
 
+## `사용된 도구`
+
+- `Spring Boot`
+- `Travis CI`
+- `AWS EC2`
+- `AWS CodeDeloy`
+- `AWS S3`
+- `Docker`
+- `Github`
+
+<br> <br>
+
 ## `EC2 Linux2에 Nginx 설치`
 
 ```
