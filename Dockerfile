@@ -4,4 +4,6 @@ WORKDIR /root
 
 EXPOSE 8080
 
+COPY ./*.jar .
+
 CMD java -jar *.jar .
