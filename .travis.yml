@@ -44,9 +44,9 @@ deploy:
     bucket: aws-gyun-s3
     key: SpringBoot_CI-CD.zip
     bundle_type: zip
-    application: Travis-Spring
+    application: Test
 
-    deployment_group: Travis-Spring-Group
+    deployment_group: Test-Group
 
     region: ap-northeast-2
     wait-until-deployed: true
