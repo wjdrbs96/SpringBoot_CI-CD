@@ -23,4 +23,4 @@ DEPLOY_JAR=$DEPLOY_PATH$JAR_NAME
 echo "> DEPLOY_JAR 배포"    >> /home/ec2-user/deploy.log
 
 cd /home/ec2-user/app/step2/zip/
-sudo docker build -t wjdrbs96/$DEPLOY_JAR:1.0.1 ./
+sudo docker build -t wjdrbs96 ./
