@@ -24,3 +24,4 @@ echo "> DEPLOY_JAR 배포"    >> /home/ec2-user/deploy.log
 
 cd /home/ec2-user/app/step2/zip/
 sudo docker build -t wjdrbs96 ./
+sudo docker run -d -p 8000:8080 wjdrbs96
