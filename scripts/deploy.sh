@@ -12,4 +12,5 @@ fi
 
 cd /home/ec2-user/app/step2/zip/
 sudo docker build -t gyunny ./
-sudo docker run -d -p 8081:8080 gyunny
+sudo docker run -d -p 8080:8080 gyunny  # Docker Container 생성
+sudo docker run -d -p 8081:8080 gyunny  # Docker Container 생성

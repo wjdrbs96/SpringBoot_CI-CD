@@ -26,11 +26,11 @@ before_deploy:
 
 deploy:
   - provider: s3
-    access_key_id: $AWS_ACCESS_KEY
+    access_key_id: $AWS_ACCESS_KEY         # Travis CI 에서 IAM 사용자 엑세스 키
 
-    secret_access_key: $AWS_SECRET_KEY
+    secret_access_key: $AWS_SECRET_KEY     # Travis CI 에서 IAM 사용자 비밀 엑세스 키
 
-    bucket: aws-gyun-s3
+    bucket: aws-gyun-s3        # S3 Bucket 이름
     region: ap-northeast-2
     skip_cleanup: true
     acl: private
@@ -38,16 +38,16 @@ deploy:
     wait-until-deployed: true
 
   - provider: codedeploy
-    access_key_id: $AWS_ACCESS_KEY
+    access_key_id: $AWS_ACCESS_KEY        # Travis CI 에서 IAM 사용자 엑세스 키
 
-    secret_access_key: $AWS_SECRET_KEY
+    secret_access_key: $AWS_SECRET_KEY    # Travis CI 에서 IAM 사용자 비밀 엑세스 키
 
-    bucket: aws-gyun-s3
+    bucket: aws-gyun-s3         # S3 Bucket 이름
     key: SpringBoot_CI-CD.zip
     bundle_type: zip
-    application: Test
+    application: Test              # CodeDeploy 애플리케이션 이름
 
-    deployment_group: Test-Group
+    deployment_group: Test-Group   # CodeDeploy 배포 그룹 이름
 
     region: ap-northeast-2
     wait-until-deployed: true
