@@ -11,7 +11,29 @@ cache:
     - '$HOME/.m2/repository'
     - '$HOME/.gradle'
 
-script: "./gradlew clean build"
+script:
+  - "./gradlew clean build"
+  - PRJ_GROUP=$(gradle properties -q | grep "group:" | awk '{print $2}')
+  - PRJ_NAME=$(gradle properties -q | grep "name:" | awk '{print $2}')
+  - PRJ_VERSION=$(gradle properties -q | grep "version:" | awk '{print $2}')
+
+  - echo "## PROJECT_GROUP - ${PRJ_GROUP}"
+  - echo "## PROJECT_NAME - ${PRJ_NAME}"
+  - echo "## PROJECT_VERSION - ${PRJ_VERSION}"
+
+  - PRJ_JAR=${PRJ_NAME}-${PRJ_VERSION}.jar
+
+    # DOCKER BUILD
+  - docker build -t ${PRJ_GROUP}.${PRJ_NAME}:latest --build-arg JAR_FILE=build/libs/${PRJ_JAR} ./
+
+    # PUSH TO DOCKER HUB
+  - docker login -u ${DOCKER_USER} -p ${DOCKER_PASS}
+  - docker tag vw.demo.helloworld:latest wjdrbs96/vw.demo.helloworld:latest
+  - docker tag vw.demo.helloworld:latest wjdrbs96/vw.demo.helloworld:0.0.1
+
+  - docker push wjdrbs96/vw.demo.helloworld:latest
+  - docker push wjdrbs96/vw.demo.helloworld:0.0.1
+
 
 before_deploy:
   - mkdir -p before-deploy # zip에 포함시킬 파일들을 담을 디렉토리 생성
