@@ -28,11 +28,11 @@ script:
 
     # PUSH TO DOCKER HUB
   - docker login -u ${DOCKER_USER} -p ${DOCKER_PASS}
-  - docker tag vw.demo.helloworld:latest wjdrbs96/vw.demo.helloworld:latest
-  - docker tag vw.demo.helloworld:latest wjdrbs96/vw.demo.helloworld:0.0.1
+  - docker tag vw.demo.helloworld:latest voyagerwoo/vw.demo.helloworld:latest
+  - docker tag vw.demo.helloworld:latest voyagerwoo/vw.demo.helloworld:0.0.1
 
-  - docker push wjdrbs96/vw.demo.helloworld:latest
-  - docker push wjdrbs96/vw.demo.helloworld:0.0.1
+  - docker push voyagerwoo/vw.demo.helloworld:latest
+  - docker push voyagerwoo/vw.demo.helloworld:0.0.1
 
 
 before_deploy:
