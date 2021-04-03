@@ -11,7 +11,7 @@ public class TestController {
 
     @GetMapping("/")
     public String test() {
-        return "Docker를 이용해서 CI/CD 구축해보기";
+        return "Docker를 이용해서 CI/CD 구축해보기 ㅎㅎ";
     }
 
     @GetMapping("/test")
