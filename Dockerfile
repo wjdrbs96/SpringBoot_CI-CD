@@ -2,6 +2,6 @@ FROM openjdk:11-jre-slim
 
 WORKDIR /root
 
-COPY ./build/libs/*.jar .
+COPY ./*.jar .
 
 CMD java -jar * .
