@@ -11,6 +11,6 @@ public class TestController {
 
     @GetMapping("/")
     public String test() {
-        return "Auto Scaling 테스트 입니다,,,";
+        return "Auto Scaling 테스트 입니다 ㅎㅎㅎㅎ";
     }
 }
