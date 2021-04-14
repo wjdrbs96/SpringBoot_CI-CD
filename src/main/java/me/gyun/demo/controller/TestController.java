@@ -11,6 +11,6 @@ public class TestController {
 
     @GetMapping("/")
     public String test() {
-        return "오토스케일링 무중단 배포 !";
+        return "블루/그린 무중단 배포 아아아아";
     }
 }
