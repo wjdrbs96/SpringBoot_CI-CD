@@ -11,6 +11,6 @@ public class TestController {
 
     @GetMapping("/")
     public String test() {
-        return "부디~~~";
+        return "오토스케일링 무중단 배포 !";
     }
 }
