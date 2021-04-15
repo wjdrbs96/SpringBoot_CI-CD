@@ -11,6 +11,6 @@ public class TestController {
 
     @GetMapping("/")
     public String test() {
-        return "배포 연습 중 !!!";
+        return "블루/그린 무중단 자동 배포 하기 !!";
     }
 }
