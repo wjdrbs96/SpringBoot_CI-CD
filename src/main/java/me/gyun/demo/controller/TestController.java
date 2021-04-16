@@ -11,6 +11,6 @@ public class TestController {
 
     @GetMapping("/")
     public String test() {
-        return "될 까 말까 !! ";
+        return "블루 그린 될 까 말까 !";
     }
 }
