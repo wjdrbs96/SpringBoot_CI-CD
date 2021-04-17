@@ -11,6 +11,6 @@ public class TestController {
 
     @GetMapping("/")
     public String test() {
-        return "자동화 배포합니다.";
+        return "자동화 배포합니다 !!";
     }
 }
