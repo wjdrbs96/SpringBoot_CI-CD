@@ -1,4 +1,5 @@
 cd /home/ec2-user/app/step3
+echo "> 복사좀 되어라 !!!" >> /home/ec2-user/deploy.log
 BUILD_JAR=$(ls *.jar)
 JAR_NAME=$(basename $BUILD_JAR)
 echo "> build 파일명: $JAR_NAME" >> /home/ec2-user/deploy.log
@@ -8,7 +9,7 @@ DEPLOY_PATH=/home/ec2-user/
 cp $BUILD_JAR $DEPLOY_PATH
 
 echo "> 현재 실행중인 애플리케이션 pid 확인" >> /home/ec2-user/deploy.log
-CURRENT_PID=$(pgrep -f $JAR_NAME)
+CURRENT_PID=$(sudo pgrep -f $JAR_NAME)
 
 if [ -z $CURRENT_PID ]
 then
