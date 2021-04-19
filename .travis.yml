@@ -45,9 +45,9 @@ deploy:
     bucket: aws-gyun-s3         # S3 Bucket 이름
     key: SpringBoot_CI-CD.zip
     bundle_type: zip
-    application: Gyunny            # CodeDeploy 애플리케이션 이름
+    application: Test            # CodeDeploy 애플리케이션 이름
 
-    deployment_group: Gyunny-Group   # CodeDeploy 배포 그룹 이름
+    deployment_group: Test-Group   # CodeDeploy 배포 그룹 이름
 
     region: ap-northeast-2
     wait-until-deployed: true
