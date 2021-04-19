@@ -1,4 +1,5 @@
-BUILD_JAR=$(ls /home/ec2-user/app/step3/*.jar)
+cd /home/ec2-user/app/step3
+BUILD_JAR=$(ls *.jar)
 JAR_NAME=$(basename $BUILD_JAR)
 echo "> build 파일명: $JAR_NAME" >> /home/ec2-user/deploy.log
 
