@@ -1,5 +1,4 @@
 cd /home/ec2-user/app/step3
-chmod 755 ./deploy.sh
 echo "> 복사좀 되어라 !!!" >> /home/ec2-user/deploy.log
 BUILD_JAR=$(ls *.jar)
 JAR_NAME=$(basename $BUILD_JAR)
