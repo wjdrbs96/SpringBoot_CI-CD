@@ -10,7 +10,12 @@ import org.springframework.web.bind.annotation.RestController;
 public class TestController {
 
     @GetMapping("/")
+    public String gyunny() {
+        return "타겟그룹 A !!!";
+    }
+
+    @GetMapping("/test")
     public String test() {
-        return "규니~~";
+        return "타겟그룹 B !!!";
     }
 }
