@@ -11,12 +11,12 @@ public class TestController {
 
     @GetMapping("/")
     public String gyunny() {
-        return "타겟그룹 A !!!";
+        return "타겟그룹 A ㅎㅎ";
     }
 
     @GetMapping("/test")
     public String test() {
-        return "타겟그룹 B !!!";
+        return "타겟그룹 B ㅎㅎ";
     }
     // test
 }
