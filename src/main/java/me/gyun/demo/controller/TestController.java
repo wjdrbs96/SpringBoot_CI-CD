@@ -18,5 +18,6 @@ public class TestController {
     public String test() {
         return "타겟그룹 B ㅎㅎ";
     }
-    // test
 }
+
+
