@@ -14,7 +14,7 @@ sleep 10
 
 for RETRY_COUNT in {1..10}
 do
-  RESPONSE=$(curl -s http://3.36.209.141/:${IDLE_PORT})
+  RESPONSE=$(curl -s http://3.36.209.141:${IDLE_PORT})
   UP_COUNT=$(echo ${RESPONSE} | grep 'real' | wc -l)
 
   if [ ${UP_COUNT} -ge 1 ]
