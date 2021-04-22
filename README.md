@@ -14,6 +14,7 @@
 - `AWS CodeDeloy`
 - `AWS S3`
 - `Docker`
+- `Nginx`
 - `Github`
 
 <br> <br>
